@@ -9,6 +9,7 @@ public class Paciente {
     private static final int INFRAPESO = -1;
     private static final int PESO_IDEAL = 0;
     private static final int SOBREPESO = 1;
+    private static final int DEF_MAYOR_EDAD = 18;
 
     private String nombre;
     private int edad;
@@ -21,7 +22,7 @@ public class Paciente {
         this.nombre = nombre;
         this.edad = edad;
         dni = generarDNI();
-        this.genero = genero;
+        this.genero = validarGenero(genero);
         this.peso = peso;
         this.altura = altura;
     }
@@ -49,9 +50,7 @@ public class Paciente {
 
     public int calcularIMC (){
 
-        double resultado = peso / Math.pow(altura,2);
-
-        System.out.println(resultado);
+        double resultado = peso / Math.pow((double) altura/100,2);
 
         if (resultado < 20){
             return INFRAPESO;
@@ -59,6 +58,26 @@ public class Paciente {
             return SOBREPESO;
         }else{
             return PESO_IDEAL;
+        }
+
+    }
+
+    public boolean esMayorDeEdad() {
+
+        if (edad >= DEF_MAYOR_EDAD){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    private char validarGenero (char genero){
+
+        if (genero == 'H' || genero == 'M'){
+            return genero;
+        }else{
+            return DEF_GENERO;
         }
 
     }
