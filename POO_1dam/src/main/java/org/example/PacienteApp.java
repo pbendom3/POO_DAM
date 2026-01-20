@@ -26,13 +26,7 @@ public class PacienteApp {
 
         System.out.println(pepe.getGenero());
 
-
-
-
-
-
-
-
+        System.out.println(patri);
 
     }
 }

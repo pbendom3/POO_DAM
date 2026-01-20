@@ -130,8 +130,12 @@ public class Paciente {
         this.altura = altura;
     }
 
+    @Override
+    public String toString(){
 
+        return "Paciente [nombre = " + nombre + " edad= " + edad + " dni= " + dni +
+                " genero= " + genero + " peso=" + peso + " altura= " + altura + "]";
 
-
+    }
 
 }
