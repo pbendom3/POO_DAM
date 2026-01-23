@@ -1,4 +1,4 @@
-package org.example;
+package Biblio;
 
 public class Estudiante {
 
@@ -84,7 +84,7 @@ public class Estudiante {
                 ", curso='" + curso + '\'' +
                 ", nia=" + nia +
                 ", email='" + email + '\'' +
-                ", libro='" + libro +
+                ", libro='" + libro.getTitulo() +
                 '}';
     }
 

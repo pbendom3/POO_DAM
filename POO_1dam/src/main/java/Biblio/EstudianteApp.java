@@ -1,4 +1,4 @@
-package org.example;
+package Biblio;
 
 public class EstudianteApp {
 
@@ -7,12 +7,10 @@ public class EstudianteApp {
         Estudiante jorge = new Estudiante("jorge","1DAM","jorge@iesmutxamel.com");
 
         System.out.println(jorge.getNia());
-        System.out.println(jorge);
 
         Estudiante raul = new Estudiante("raul");
 
         System.out.println(raul.getNia());
-        System.out.println(raul);
 
         Estudiante adrian = new Estudiante("adrian");
 
@@ -21,13 +19,15 @@ public class EstudianteApp {
         System.out.println(Estudiante.validarCorreo("patri@mutxamel.com"));
         System.out.println(Estudiante.validarCorreo("patri@alu.edu.gva.es"));
 
-        Libro divina_comedia = new Libro("divina comedia","dante ali");
+        Editorial millenium = new Editorial("Millenium","España");
+
+        Libro divina_comedia = new Libro("divina comedia","dante ali",millenium);
 
         System.out.println(divina_comedia);
 
-        ///  !!!!!!!!!!!!!!
         divina_comedia.prestar(jorge);
 
+        System.out.println(jorge);
 
         System.out.println(divina_comedia.estaDisponible());
 
