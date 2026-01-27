@@ -29,7 +29,9 @@ public class Libro {
         return CADENA_ID+cantidadLibros;
     }
 
-    public void prestar(Estudiante estudiante){
+    public Prestamo prestar(Estudiante estudiante){
+
+        Prestamo prestamo = null;
 
         if (disponible && estudiante.getLibro() == null){
             disponible=false;
@@ -37,11 +39,15 @@ public class Libro {
             librosDisponibles--;
             estudiantePrestado = estudiante;
             estudiante.setLibro(this);
+            prestamo = new Prestamo(this,estudiante);
+            System.out.println("Préstamo realizado con éxito.");
         } else if (estudiante.getLibro() != null) {
             System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado.");
         } else{
             System.out.println("El libro " + titulo + " no está disponible.");
         }
+
+        return prestamo;
 
     }
 
