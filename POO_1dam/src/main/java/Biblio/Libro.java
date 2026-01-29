@@ -33,16 +33,16 @@ public class Libro {
 
         Prestamo prestamo = null;
 
-        if (disponible && estudiante.getLibro() == null){
+        if (disponible && !estudiante.getListaLibros().contains(this)){
             disponible=false;
             System.out.println("El libro "+ titulo + " ha sido prestado a " + estudiante.getNombre() + " de " + estudiante.getCurso());
             librosDisponibles--;
             estudiantePrestado = estudiante;
-            estudiante.setLibro(this);
+            estudiante.insertarLibro(this);
             prestamo = new Prestamo(this,estudiante);
             System.out.println("Préstamo realizado con éxito.");
-        } else if (estudiante.getLibro() != null) {
-            System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado.");
+        } else if (estudiante.getListaLibros().contains(this)) {
+            System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene el libro " + titulo + " prestado");
         } else{
             System.out.println("El libro " + titulo + " no está disponible.");
         }
@@ -57,7 +57,7 @@ public class Libro {
             disponible=true;
             System.out.println("El libro " + titulo + " ha sido devuelto por " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso());
             librosDisponibles++;
-            estudiantePrestado.setLibro(null);
+            estudiantePrestado.borrarLibro(this);
             estudiantePrestado = null;
         }else{
             System.out.println("El libro " + titulo + " está disponible. No se puede devolver.");

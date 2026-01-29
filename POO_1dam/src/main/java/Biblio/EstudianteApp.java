@@ -29,7 +29,7 @@ public class EstudianteApp {
 
         System.out.println("Fecha préstamo: " + p1.getFecha());
 
-        System.out.println(jorge);
+        System.out.println(jorge.getListaLibros());
 
         System.out.println(divina_comedia.estaDisponible());
 
@@ -40,6 +40,8 @@ public class EstudianteApp {
 
         divina_comedia.devolver();
         divina_comedia.devolver();
+
+        System.out.println(jorge.getListaLibros());
 
         System.out.println(divina_comedia.estaDisponible());
 
