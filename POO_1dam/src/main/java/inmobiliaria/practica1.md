@@ -8,7 +8,7 @@
    - Contenido de las clases (.java)
 4. [Programa principal (InmobiliariaApp)](#3-programa-principal-inmobiliariaapp)
 5. [Pruebas](#4-pruebas)
-6. [Entrega](5-entrega)
+6. [Entrega](#5-entrega)
 
 ### 1. Intro
 
