@@ -11,9 +11,16 @@
 6. [Entrega](#5-entrega)
 
 ### 1. Intro
-
+> La práctica consiste en una app ...
 
 ### 2. Estructura de clases
+
+#### Diagrama de clases UML
+![]()
+
+#### Código de PlantUML
+
+#### Contenido de las clases (.java)
 
 ### 3. Programa principal (InmobiliariaApp)
 
