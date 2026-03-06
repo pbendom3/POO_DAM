@@ -10,6 +10,10 @@ public class TarjetasApp {
 
         Tarjetas tarjeta_tipo = Tarjetas.VISA;
 
+        if (tarjeta_tipo == Tarjetas.VISA){
+            System.out.println("sasfdfhskfhskd");
+        }
+
         System.out.println(tarjeta_tipo.ordinal());
         System.out.println(tarjeta_tipo.name());
 
