@@ -26,7 +26,7 @@ public class CineApp {
                 cola.poll();
                 recaudacion+=1;
             }
-            
+
         }
 
         System.out.println("La recaudación ha sido de : " + recaudacion + "€");
