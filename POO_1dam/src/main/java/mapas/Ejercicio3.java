@@ -10,7 +10,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
 
         System.out.println("**** REGISTRO DE TEMPERATURAS ****");
-      
+
         while(true){
 
             System.out.println("Elige una opción [insertar, actualizar, consultar, ver todas, salir]: ");
