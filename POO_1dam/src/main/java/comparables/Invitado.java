@@ -6,7 +6,7 @@ import java.time.LocalTime;
 
 @Getter
 @ToString
-public class Invitado { //implements Comparable<Invitado>{
+public class Invitado implements Comparable<Invitado>{
 
     private LocalTime hora;
     private Integer edad;
@@ -18,23 +18,22 @@ public class Invitado { //implements Comparable<Invitado>{
         this.nombre = nombre;
     }
 
+    @Override
+    public int compareTo(Invitado invitado) {
 
-//    @Override
-//    public int compareTo(Invitado invitado) {
-//
-//        int comparar = edad.compareTo(invitado.getEdad());
-//
-//        if (comparar != 0){
-//            return comparar;
-//        }
-//
-//        comparar = nombre.compareTo(invitado.getNombre());
-//
-//        if (comparar != 0){
-//            return comparar;
-//        }
-//
-//        return hora.compareTo(invitado.getHora());
-//    }
+        int comparar = edad.compareTo(invitado.getEdad());
+
+        if (comparar != 0){
+            return comparar;
+        }
+
+        comparar = nombre.compareTo(invitado.getNombre());
+
+        if (comparar != 0){
+            return comparar;
+        }
+
+        return hora.compareTo(invitado.getHora());
+    }
 
 }
